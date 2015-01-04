@@ -1,28 +1,28 @@
-#N canvas 767 243 635 449 10;
+#N canvas 796 244 635 449 10;
 #X obj 291 337 dac~;
-#X obj 171 6 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 172 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X obj 284 32 metro 1000;
 #X obj 348 -31 hsl 128 15 1 1000 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 1600 1;
+-1 -1 1700 1;
 #X obj 87 64 vsl 15 128 0.0009 1 1 0 empty empty empty 0 -9 0 10 -262144
--1 -1 7500 1;
+-1 -1 9000 1;
 #X text 21 169 gain -->;
 #X text 404 5 ^ frequency selector period;
 #X floatatom 284 6 5 0 0 0 - - -, f 5;
-#X obj 257 140 sawnoise;
-#X obj 354 140 sawnoise;
-#X obj 276 266 stereomixer;
 #X text 92 374 http://www.pd-tutorial.com/english/ch03s05.html;
+#X obj 257 140 sawnoise~;
+#X obj 276 266 stereomixer~;
+#X obj 354 140 sawnoise~;
 #X connect 1 0 2 0;
-#X connect 1 0 8 0;
 #X connect 1 0 9 0;
-#X connect 2 0 8 1;
+#X connect 1 0 11 0;
 #X connect 2 0 9 1;
+#X connect 2 0 11 1;
 #X connect 3 0 2 1;
 #X connect 3 0 7 0;
 #X connect 4 0 10 0;
-#X connect 8 0 10 1;
-#X connect 9 0 10 2;
+#X connect 9 0 10 1;
 #X connect 10 0 0 0;
 #X connect 10 1 0 1;
+#X connect 11 0 10 2;

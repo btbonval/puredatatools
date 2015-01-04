@@ -1,9 +1,8 @@
-#N canvas 20 450 558 388 10;
+#N canvas 18 451 558 388 10;
 #X obj 154 -466 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X floatatom 239 -400 5 0 0 0 - - -, f 5;
 #X obj 154 -429 lowrandfreq;
-#X obj 154 -390 fullphasor;
 #X obj 185 -501 metro 142.5;
 #X text 287 -531 override metro period;
 #X obj 154 -312 outlet~;
@@ -16,14 +15,15 @@
 #X obj 185 -563 inlet;
 #X obj 248 -530 inlet;
 #X text 205 -609 toggle new frequency;
+#X obj 154 -390 fullphasor~;
 #X connect 0 0 2 0;
 #X connect 2 0 1 0;
-#X connect 2 0 3 0;
-#X connect 3 0 9 0;
-#X connect 4 0 0 0;
-#X connect 8 0 9 1;
-#X connect 9 0 6 0;
-#X connect 10 0 8 0;
-#X connect 12 0 0 0;
-#X connect 13 0 4 0;
-#X connect 14 0 4 1;
+#X connect 2 0 15 0;
+#X connect 3 0 0 0;
+#X connect 7 0 8 1;
+#X connect 8 0 5 0;
+#X connect 9 0 7 0;
+#X connect 11 0 0 0;
+#X connect 12 0 3 0;
+#X connect 13 0 3 1;
+#X connect 15 0 8 0;
