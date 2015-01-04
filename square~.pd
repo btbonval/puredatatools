@@ -1,0 +1,13 @@
+#N canvas 529 178 397 256 10;
+#X obj 54 24 inlet;
+#X obj 91 68 wrap~;
+#X obj 54 46 fullphasor~;
+#X obj 91 90 -~ 0.5;
+#X obj 54 134 outlet~;
+#X obj 54 112 -~;
+#X connect 0 0 2 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 0;
+#X connect 2 0 5 0;
+#X connect 3 0 5 1;
+#X connect 5 0 4 0;
