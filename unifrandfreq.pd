@@ -1,0 +1,11 @@
+#N canvas 449 552 326 299 10;
+#X floatatom 76 152 5 20 22050 0 - - -, f 5;
+#X obj 76 17 inlet;
+#X obj 76 194 outlet;
+#X obj 76 107 + 40;
+#X obj 76 62 random 11960;
+#X text 37 225 generate 40 to 12000 linearly;
+#X connect 0 0 2 0;
+#X connect 1 0 4 0;
+#X connect 3 0 0 0;
+#X connect 4 0 3 0;

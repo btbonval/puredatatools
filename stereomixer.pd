@@ -1,0 +1,93 @@
+#N canvas 61 293 990 683 10;
+#X obj 123 232 *~;
+#X obj 357 232 *~;
+#X obj 29 374 env~ 128;
+#X obj 566 374 env~ 128;
+#X floatatom -36 400 5 0 0 0 - - -, f 5;
+#X floatatom 632 400 5 0 0 0 - - -, f 5;
+#X obj 116 374 tabwrite~ array1;
+#X obj 339 374 tabwrite~ array2;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X array array1 100 float 3;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0;
+#X coords 0 1 99 -1 200 140 1;
+#X restore 111 428 graph;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X array array2 100 float 3;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0;
+#X coords 0 1 99 -1 200 140 1;
+#X restore 337 428 graph;
+#X obj 161 305 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -127 101 metro 250;
+#X obj -141 48 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 141 24 inlet;
+#X obj -73 48 hsl 128 15 250 1000 0 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 0 1;
+#X text -141 23 plot waveforms \, control sample interval;
+#X obj 161 278 outlet~;
+#X obj 264 278 outlet~;
+#X obj 193 48 inlet~;
+#X obj 229 72 inlet~;
+#X text 248 47 channel 1;
+#X text 292 71 channel 2;
+#X obj 292 96 inlet;
+#X obj 340 125 inlet;
+#X text 193 23 master gain between 0..1;
+#X obj 123 205 *~;
+#X obj 357 205 *~;
+#X text 340 100 channel 1 gain between 0..1;
+#X text 389 122 channel 2 gain between 0..1;
+#X obj 220 205 sig~ 0.5;
+#X obj 292 123 sig~ 1;
+#X obj 340 152 sig~ 1;
+#X floatatom -114 305 5 0 0 0 - - -, f 5;
+#X obj -111 226 hsl 128 15 0 16 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 6900 1;
+#X obj -114 278 expr pow(2 \, $f1);
+#X obj -114 251 div 1;
+#X obj 30 430 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 29 401 - 100;
+#X obj 567 430 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 566 401 - 100;
+#X text -115 197 adjust window size for volume;
+#X connect 0 0 2 0;
+#X connect 0 0 6 0;
+#X connect 0 0 16 0;
+#X connect 1 0 3 0;
+#X connect 1 0 7 0;
+#X connect 1 0 17 0;
+#X connect 2 0 4 0;
+#X connect 2 0 37 0;
+#X connect 3 0 5 0;
+#X connect 3 0 39 0;
+#X connect 10 0 6 0;
+#X connect 10 0 7 0;
+#X connect 11 0 10 0;
+#X connect 12 0 11 0;
+#X connect 13 0 29 0;
+#X connect 14 0 11 1;
+#X connect 18 0 25 0;
+#X connect 19 0 26 0;
+#X connect 22 0 30 0;
+#X connect 23 0 31 0;
+#X connect 25 0 0 0;
+#X connect 26 0 1 0;
+#X connect 29 0 0 1;
+#X connect 29 0 1 1;
+#X connect 30 0 25 1;
+#X connect 31 0 26 1;
+#X connect 32 0 2 0;
+#X connect 32 0 3 0;
+#X connect 33 0 35 0;
+#X connect 34 0 32 0;
+#X connect 35 0 34 0;
+#X connect 37 0 36 0;
+#X connect 39 0 38 0;
