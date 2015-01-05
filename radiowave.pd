@@ -1,0 +1,17 @@
+#N canvas 260 664 444 181 10;
+#X obj 38 15 inlet;
+#X obj 38 50 select 0 1 2;
+#X obj 311 120 outlet;
+#X msg 38 85 symbol off;
+#X msg 117 85 symbol sine;
+#X msg 209 85 symbol square;
+#X msg 311 85 symbol saw;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 1 1 4 0;
+#X connect 1 2 5 0;
+#X connect 1 3 6 0;
+#X connect 3 0 2 0;
+#X connect 4 0 2 0;
+#X connect 5 0 2 0;
+#X connect 6 0 2 0;
