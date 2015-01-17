@@ -1,4 +1,4 @@
-#N canvas 649 308 647 528 10;
+#N canvas 753 414 647 528 10;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array custom_wave_shape 11 float 3;
 #A 0 -0.929818 0 0.929818 0.685039 0.929818 4.82661e-06 -0.929817 -0.68504
@@ -28,7 +28,7 @@
 #X floatatom -11 226 5 0 0 0 - - -, f 5;
 #X obj 360 243 *~;
 #X obj 374 209 phasor~ 440;
-#X obj 26 33 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 16 34 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 377 138 hsl 128 15 20 22050 1 0 empty empty empty -2 -8 0 10
 -262144 -1 -1 0 1;

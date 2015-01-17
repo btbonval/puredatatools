@@ -1,0 +1,10 @@
+#N canvas 704 631 358 239 10;
+#X obj 20 16 inlet;
+#X obj 20 60 div 1;
+#X obj 20 104 expr pow(2 \, $f1);
+#X obj 20 152 outlet;
+#X text 71 58 convert to whole integer;
+#X text 137 105 raise two to power of input;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
