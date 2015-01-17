@@ -1,0 +1,33 @@
+#N canvas 955 434 466 307 10;
+#X obj 73 63 inlet;
+#X obj 170 65 inlet;
+#X obj 268 68 inlet;
+#X floatatom 73 124 5 0 0 0 - - -, f 5;
+#X floatatom 268 128 5 0 0 0 - - -, f 5;
+#X floatatom 170 126 5 0 0 0 - - -, f 5;
+#X text 166 37 minimum;
+#X text 265 39 maximum;
+#X text 70 36 test value;
+#X text 76 215 outputs test value \, minimum if test value smaller
+\, maximum if test value larger.;
+#X obj 73 162 expr $f3 \; if ($f1 < $f2 \, $f2 \, if ($f1 > $f3 \,
+$f3 \, $f1)) \;, f 33;
+#X obj 268 240 outlet;
+#X obj -37 63 loadbang;
+#X text -42 37 accept parms;
+#X obj 30 97 f \$1;
+#X obj 125 98 f \$2;
+#X obj 229 99 f \$3;
+#X connect 0 0 3 0;
+#X connect 1 0 5 0;
+#X connect 2 0 4 0;
+#X connect 3 0 10 0;
+#X connect 4 0 10 2;
+#X connect 5 0 10 1;
+#X connect 10 1 11 0;
+#X connect 12 0 14 0;
+#X connect 12 0 15 0;
+#X connect 12 0 16 0;
+#X connect 14 0 3 0;
+#X connect 15 0 5 0;
+#X connect 16 0 4 0;
