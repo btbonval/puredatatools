@@ -1,43 +1,43 @@
-#N canvas 838 383 635 449 10;
+#N canvas 836 384 635 449 10;
 #X obj 287 319 dac~;
 #X obj 278 -29 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 346 -52 hsl 128 15 1 1000 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2000 1;
+-1 -1 0 1;
 #X obj 87 64 vsl 15 128 0.0009 1 1 0 empty empty empty 0 -9 0 10 -262144
--1 -1 11600 1;
+-1 -1 0 1;
 #X text 21 169 gain -->;
 #X text 363 -10 ^ frequency selector period;
 #X floatatom 297 -29 5 0 0 0 - - -, f 5;
 #X obj 261 265 stereomixer~;
 #X obj 278 10 metro 142;
-#X obj 150 136 radiowave;
 #X obj 150 62 vradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144 -1
 -1 0;
-#X obj 206 201 sawnoise~;
 #X text 173 59 off;
 #X text 173 75 sine;
 #X text 173 92 square;
 #X text 172 108 saw;
-#X obj 371 132 radiowave;
 #X obj 371 58 vradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144 -1
 -1 0;
-#X obj 309 200 sawnoise~;
 #X text 394 55 off;
 #X text 394 71 sine;
 #X text 394 88 square;
 #X text 393 104 saw;
+#X obj 206 201 noisegenerator~;
+#X obj 309 200 noisegenerator~;
+#X obj 150 136 radio2symbol4noisegen;
+#X obj 371 132 radio2symbol4noisegen;
 #X connect 1 0 8 0;
 #X connect 2 0 6 0;
 #X connect 2 0 8 1;
 #X connect 3 0 7 0;
 #X connect 7 0 0 0;
 #X connect 7 1 0 1;
-#X connect 8 0 11 1;
-#X connect 8 0 18 1;
-#X connect 9 0 11 0;
-#X connect 10 0 9 0;
-#X connect 11 0 7 1;
-#X connect 16 0 18 0;
-#X connect 17 0 16 0;
-#X connect 18 0 7 2;
+#X connect 8 0 19 1;
+#X connect 8 0 20 1;
+#X connect 9 0 21 0;
+#X connect 14 0 22 0;
+#X connect 19 0 7 1;
+#X connect 20 0 7 2;
+#X connect 21 0 19 0;
+#X connect 22 0 20 0;
