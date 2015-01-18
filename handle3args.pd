@@ -1,0 +1,27 @@
+#N canvas 908 630 451 300 10;
+#X obj -184 153 unpack \$1 \$2 \$3;
+#X obj -184 65 list \$1 \$2 \$3;
+#X obj -184 33 loadbang;
+#X obj -157 88 inlet;
+#X obj -131 184 inlet;
+#X obj -83 185 inlet;
+#X text -86 61 on load \, use default arguments passed in object box
+;
+#X obj -157 118 route list;
+#X text -80 109 if a list is passed in \, process it below. otherwise
+\, pass it directly out;
+#X text -83 151 process list;
+#X text -35 183 direct inlet passthrough;
+#X obj -184 215 outlet;
+#X obj -141 215 outlet;
+#X obj -97 215 outlet;
+#X connect 0 0 11 0;
+#X connect 0 1 12 0;
+#X connect 0 2 13 0;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 3 0 7 0;
+#X connect 4 0 12 0;
+#X connect 5 0 13 0;
+#X connect 7 0 0 0;
+#X connect 7 1 11 0;

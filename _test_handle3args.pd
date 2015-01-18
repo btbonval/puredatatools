@@ -1,0 +1,18 @@
+#N canvas 303 647 450 300 10;
+#X msg 99 73 40;
+#X msg 157 73 50;
+#X msg 216 72 60;
+#X msg 71 50 list 70 80 90, f 14;
+#X msg 31 28 100 110 120;
+#X obj 99 104 handle3args 10 20 30;
+#X floatatom 99 140 5 0 0 0 - - -, f 5;
+#X floatatom 157 140 5 0 0 0 - - -, f 5;
+#X floatatom 216 139 5 0 0 0 - - -, f 5;
+#X connect 0 0 5 0;
+#X connect 1 0 5 1;
+#X connect 2 0 5 2;
+#X connect 3 0 5 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 5 1 7 0;
+#X connect 5 2 8 0;
