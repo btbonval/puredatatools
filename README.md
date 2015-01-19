@@ -46,6 +46,8 @@ frequency to play the wave at, and some `sinesum` parameters to shape the wave.
 * uses
  * `handle8args`
  * `hardbounds`
+* todo
+ * condense sinesum parameters into single inlet via pack/list?
 
 #### `hardbounds.pd`
 
@@ -59,7 +61,7 @@ instead. If the test value goes above the maximum value, the maximum value is
 output instead.
 
 * todo
- * This should use `handle3args` but does not.
+ * use `handle3args`
 
 ## Handling arguments
 
@@ -173,3 +175,7 @@ gain for each channel.
 
 Inside the abstraction, volume meters display each channel's dB and waveforms
 can be visualized with an oscilloscope-like function.
+
+* todo
+ * try to overlay independent gain control floats into the audio inlets
+ * use `hardbounds`
