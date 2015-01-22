@@ -156,15 +156,6 @@ bang.
  * `square~`
  * [`lnrnd4Hz`|`unifrnd4Hz`]
 
-#### `square~.pd`
-
-Modifies a fullphasor into a binary square wave.
-
-#### `fullphasor~.pd`
-
-Extends phasor amplitude from 0 to 1 to -1 to 1, for audio saw
-waves.
-
 #### `lnrnd4Hz.pd`
 
 Randomly samples floats from a distribution close to the log normal
@@ -182,11 +173,39 @@ The extent of the floats are meant to be interpreted as Hz within human hearing
 capability. These might need to be opened up for younger persons with higher
 frequency reception or with better performing speakers.
 
-## Stereo Mixer
+## Tools
 
-A mixer and visualizer for 2 channels.
+Miscellaneous tools.
 
 ### Files
+
+#### `_test_crossfader.pd`
+
+Tests the crossfader by alternating between two stereo tones.
+
+* uses
+ * `stereocrossfader~`
+
+#### `stereocrossfader~.pd`
+
+Takes in two stereo inputs and crossfades between them. Left two inlets are
+deck A channels, next two inlets are deck B channels, and the right most inlet
+is a ratio of B from 0..1.
+
+0 will output only deck A's channels, 0.5 will evenly mix decks A and B, and 1
+will output only deck B's channels.
+
+* uses
+ * `hardbounds`
+
+#### `square~.pd`
+
+Modifies a fullphasor into a binary square wave.
+
+#### `fullphasor~.pd`
+
+Extends phasor amplitude from 0 to 1 to -1 to 1, for audio saw
+waves.
 
 #### `stereomixer~.pd`
 
