@@ -1,0 +1,15 @@
+#N canvas 1032 536 507 337 10;
+#X obj 50 178 *~;
+#X obj 26 17 inlet~;
+#X obj 98 56 inlet~;
+#X obj 51 226 outlet~;
+#X obj 98 95 +~ 1;
+#X text 84 17 carrier signal;
+#X obj 97 126 *~ 0.5;
+#X text 152 56 modulator signal (full amplitude -1..1);
+#X text 148 111 convert amplitude from -1..1 to 0..1;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 1;

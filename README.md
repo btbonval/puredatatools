@@ -16,6 +16,26 @@ directory and does not dive into subdirectories. This repository is meant to be
 used as a single search path for Pure Data, mostly because that is easier than
 adding a bunch of paths to subdirectories as needed or desired.
 
+## Modulators
+
+Some of the typical modulators. AM, FM, etc.
+
+### Files
+
+#### `_test_AMmod.pd`
+
+Shows how to use `AMmod~`. Two `AMmod~`s are used to show daisy chaining the
+modulation, and some buttons exist for interesting settings.
+
+* uses
+ * `AMmod~`
+ * `fullphasor~`
+
+#### `AMmod~.pd`
+
+Modulates the left carrier signal by the right modulator signal. Carrier and
+modulator signal are both expected to be full amplitude -1..1.
+
 ## Custom wave generator
 
 This set of patches is inspired by the custom wave chapter in the FLOSS Pure
