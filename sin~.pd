@@ -1,0 +1,10 @@
+#N canvas 548 422 450 300 10;
+#X obj 73 39 inlet~;
+#X obj 72 84 -~ 0.25;
+#X obj 72 132 cos~;
+#X obj 72 183 outlet~;
+#X text 130 36 treat input as a value multiplied by twice pi and output
+the sine of it.;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;

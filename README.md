@@ -218,3 +218,7 @@ can be visualized with an oscilloscope-like function.
 * todo
  * try to overlay independent gain control floats into the audio inlets
  * use `hardbounds`
+
+#### `sin~.pd`
+
+A sine function to complement the `cos~` cosine function.
